@@ -6,6 +6,7 @@ defmodule Rumbl.Video do
     field :title, :string
     field :description, :string
     belongs_to :user, Rumbl.User
+    belongs_to :category, Rumbl.Category
 
     timestamps()
   end
@@ -16,6 +17,7 @@ defmodule Rumbl.Video do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:url, :title, :description])
+    |> assoc_constraint(:category)
     |> validate_required([:url, :title, :description])
   end
 end

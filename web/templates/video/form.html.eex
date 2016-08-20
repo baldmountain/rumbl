@@ -18,6 +18,11 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :category_id, "Category", class: "control-label" %>
+    <%= select f, :category_id, @categories, class: "form-control", prompt: "Choose a category" %>
+  </div>
+
+  <div class="form-group">
     <%= label f, :description, class: "control-label" %>
     <%= textarea f, :description, class: "form-control" %>
     <%= error_tag f, :description %>
