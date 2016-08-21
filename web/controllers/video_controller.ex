@@ -32,7 +32,7 @@ end
   def new(conn, _params, user) do
     changeset =
       user
-      |> build_assoc(:videos, nil)
+      |> build_assoc(:videos)
       |> Video.changeset()
     render(conn, "new.html", changeset: changeset)
   end
