@@ -1,3 +1,5 @@
+'use strict';
+
 let Player = { player: null,
   init(domId, playerId, onReady) {
     window.onYouTubeIframeAPIReady = () => {
@@ -15,6 +17,7 @@ let Player = { player: null,
   },
   onPlayerStateChange(event) { },
   getCurrentTime() { return Math.floor(this.player.getCurrentTime() * 1000); },
-  seekTo(millsec){ return this.player.seekTo(millsec / 1000) }
+  seekTo(millsec) { return this.player.seekTo(millsec / 1000) }
 }
+
 export default Player;
