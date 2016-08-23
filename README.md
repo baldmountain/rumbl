@@ -1,5 +1,9 @@
 # Rumbl
 
+This is the Rumbl example from the book Programming Phoenix. It has been
+updated to use Phoenix 1.2 and Elixir 1.3. The only difference is that is uses
+MySql rather than Postgesql.
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
