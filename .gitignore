@@ -25,3 +25,4 @@ erl_crash.dump
 
 /.vscode
 /rel/rumbl
+/config/dev.secret.exs
